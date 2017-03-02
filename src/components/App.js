@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Provider } from 'react-redux'
+import { Provider, connect } from 'react-redux'
 
 import { Router, IndexRoute, Route, Link } from 'react-router';
 
@@ -28,13 +28,36 @@ Layout.propTypes = {
 };
 
 
-const Home = () => (
+
+const Home = ({ counter, onUp, onDown }) => (
   <div className={styles.app}>
     <h2>Hello</h2>
-    <Button />
-    <Button />
+    <div>Counter: {counter}</div>
+    <Button onClick={onUp}>Up</Button>
+    <Button onClick={onDown}>Down</Button>
   </div>
 );
+
+
+const mapStateToProps = ({ counter: { value } }) => ({
+  counter: value,
+});
+
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  onUp() {
+    console.log("up ...");
+    dispatch({ type: 'INCREMENT' });
+  },
+  onDown() {
+    console.log("down ...");
+    dispatch({ type: 'DECREMENT' });
+  },
+});
+
+const HomeContainer = connect(mapStateToProps, mapDispatchToProps)(Home);
+
+
+
 
 const About = () => (
   <div className={styles.app}>
@@ -47,7 +70,7 @@ const App = ({ store, history }) => (
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={Layout}>
-        <IndexRoute component={Home} />
+        <IndexRoute component={HomeContainer} />
         <Route path="/about" component={About} />
       </Route>
     </Router>
