@@ -26,7 +26,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   const html = fs.readFileSync(`${distPath}/index.html`, 'utf8');
   const timestamp = new Date().toUTCString();
   const meta = `
