@@ -7,6 +7,6 @@ https://github.com/jantimon/html-webpack-plugin
 https://github.com/glenjamin/webpack-hot-middleware
 
 
-
+https://hackernoon.com/hot-reload-all-the-things-ec0fed8ab0
 
 https://gist.github.com/markerikson/dc6cee36b5b6f8d718f2e24a249e0491
