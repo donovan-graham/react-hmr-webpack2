@@ -1,10 +1,20 @@
 const express = require('express');
 const { resolve } = require('path');
+const csrf = require('csurf');
 
 let fs = require('fs');
 let distPath = resolve(__dirname, 'dist');
 
 const app = express();
+app.set('trust proxy', true);
+
+/* **** security ***** */
+app.use(require('./server/middleware/security'));
+
+/* **** CSRF ***** */
+// app.use(cookieParser());
+// app.use(csrf({ cookie: true }));
+
 
 if (process.env.NODE_ENV !== 'production') {
   const webpack = require('webpack');
