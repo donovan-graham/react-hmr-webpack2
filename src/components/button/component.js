@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
 // styles
-import styles from './Button.css';
+import styles from './style.css';
 
 const Button = ({ onClick, children }) => (
   <button className={styles.btn} onClick={onClick}>{children}</button>

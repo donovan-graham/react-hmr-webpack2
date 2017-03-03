@@ -19,6 +19,13 @@ nav ul li a:hover {
   background-color: #4CAF50;
 }
 
+
+.layout {
+  width: 600px;
+  margin: 0 auto;
+  border: 2px solid #333;
+}
+
 .app {
   text-size-adjust: none;
   font-family: helvetica, arial, sans-serif;
@@ -26,10 +33,4 @@ nav ul li a:hover {
   padding: 6px 20px 30px;
   background-color: #efefef;
   color: #444;
-}
-
-.layout {
-  width: 600px;
-  margin: 0 auto;
-  border: 2px solid #333;
 }
