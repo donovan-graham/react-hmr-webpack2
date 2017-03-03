@@ -1,6 +1,7 @@
 const express = require('express');
 const { resolve } = require('path');
 const csrf = require('csurf');
+const cookieParser = require('cookie-parser');
 
 let fs = require('fs');
 let distPath = resolve(__dirname, 'dist');
@@ -12,8 +13,8 @@ app.set('trust proxy', true);
 app.use(require('./server/middleware/security'));
 
 /* **** CSRF ***** */
-// app.use(cookieParser());
-// app.use(csrf({ cookie: true }));
+app.use(cookieParser());
+app.use(csrf({ cookie: true }));
 
 
 if (process.env.NODE_ENV !== 'production') {
