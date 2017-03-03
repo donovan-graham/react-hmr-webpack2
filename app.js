@@ -9,6 +9,8 @@ let distPath = resolve(__dirname, 'dist');
 const app = express();
 app.set('trust proxy', true);
 
+app.use('/static', express.static(resolve(__dirname, 'static')));
+
 /* **** security ***** */
 app.use(require('./server/middleware/security'));
 
