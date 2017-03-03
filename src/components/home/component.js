@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
 // components
-import Button from 'components/button';
+import Button from 'components/button/component';
 
 const Home = ({ counter, onUp, onDown }) => (
   <div>

@@ -11,7 +11,7 @@ import { AppContainer } from 'react-hot-loader';
 
 
 import App from './components/App';
-import rootReducer from './root';
+import rootReducer from './root/reducer';
 
 const sagaMiddleware = createSagaMiddleware();
 const rootMiddleware = [routerMiddleware(browserHistory), sagaMiddleware];
@@ -50,7 +50,7 @@ if (module.hot) {
     render(App);
   });
 
-  module.hot.accept('./root', () => {
+  module.hot.accept('./root/reducer', () => {
     store.replaceReducer(rootReducer);
   });
 }

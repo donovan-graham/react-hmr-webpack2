@@ -4,9 +4,9 @@ import { Provider } from 'react-redux'
 import { Router, IndexRoute, Route } from 'react-router';
 
 // components
-import Layout from 'components/layout';
-import About from 'components/about';
-import Home from 'components/home';
+import Layout from 'components/layout/component';
+import About from 'components/about/component';
+import Home from 'components/home/container';
 
 const App = ({ store, history }) => (
   <Provider store={store}>
