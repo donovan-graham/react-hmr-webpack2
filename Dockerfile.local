@@ -1,0 +1,17 @@
+FROM node:7.5-slim
+
+ARG DOCKER_USER_ID
+ARG DOCKER_USER_NAME
+
+RUN userdel -r -f node
+RUN useradd -ms /bin/bash --groups root -u $DOCKER_USER_ID $DOCKER_USER_NAME
+
+RUN chown -R $DOCKER_USER_NAME /usr/local/bin && \
+  chown -R $DOCKER_USER_NAME /usr/local/lib
+
+USER $DOCKER_USER_NAME
+
+VOLUME /data
+WORKDIR /data
+
+EXPOSE 3000

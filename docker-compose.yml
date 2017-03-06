@@ -12,6 +12,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      # dockerfile: Dockerfile.local
+      # args:
+      #  - DOCKER_USER_ID
+      #  - DOCKER_USER_NAME
     image: app:local
     volumes:
       - .:/data

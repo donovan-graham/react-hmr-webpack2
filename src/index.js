@@ -13,9 +13,10 @@ import { AppContainer } from 'react-hot-loader';
 import App from './components/App';
 import rootReducer from './root';
 
+
 const sagaMiddleware = createSagaMiddleware();
 const rootMiddleware = [routerMiddleware(browserHistory), sagaMiddleware];
-const rootSagas = [];
+
 
 const store = {
   ...createStore(
@@ -27,6 +28,7 @@ const store = {
   runSaga: sagaMiddleware.run,
 };
 
+import rootSagas from './root/saga';
 rootSagas.map(store.runSaga);
 
 const history = syncHistoryWithStore(browserHistory, store);

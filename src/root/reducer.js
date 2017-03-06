@@ -1,12 +1,13 @@
 import { combineReducers } from 'redux'
 import { routerReducer } from 'react-router-redux';
 
+import { INCREMENT, DECREMENT } from './action';
 
 function counterReducer(state = { value: 0 }, action) {
   switch (action.type) {
-    case 'INCREMENT':
+    case INCREMENT:
       return { ...state, value: state.value + 1 };
-    case 'DECREMENT':
+    case DECREMENT:
       return { ...state, value: state.value - 1 };
     default:
       return state;

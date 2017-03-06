@@ -7,6 +7,9 @@ const publicPath = '/assets/';
 
 module.exports = {
   entry: [
+    'babel-polyfill',
+    // Set up an ES6-ish environment
+
     'react-hot-loader/patch',
     // activate HMR for React
 
