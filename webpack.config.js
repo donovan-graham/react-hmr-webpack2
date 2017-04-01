@@ -1,4 +1,3 @@
-
 const { resolve } = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -23,7 +22,7 @@ module.exports = {
 
     'webpack-hot-middleware/client?reload=true&path=/__webpack_hmr',
 
-    './index.js'
+    './index.js',
     // the entry point of our app
   ],
   output: {
@@ -53,10 +52,10 @@ module.exports = {
     // port: 3000,
     overlay: {
       warnings: true,
-      errors: true
+      errors: true,
     },
 
-    historyApiFallback: true
+    historyApiFallback: true,
   },
 
   resolve: {
@@ -67,18 +66,8 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: [
-          'babel-loader',
-        ],
-        exclude: /node_modules/
-      },
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader?modules',
-          'postcss-loader',
-        ],
+        use: ['babel-loader'],
+        exclude: /node_modules/,
       },
     ],
   },
