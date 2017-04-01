@@ -1,23 +1,41 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
+import styled from 'styled-components';
+import './global-style';
+import Nav from 'components/navigation';
 
-// styles
-import styles from './style.css';
+/* styled */
+const Body = styled.div`
+  width: 600px;
+  margin: 0 auto;
+  border: 2px solid #333;
+`;
 
+const Content = styled.div`
+  text-size-adjust: none;
+  font-family: helvetica, arial, sans-serif;
+  line-height: 200%;
+  padding: 6px 20px 30px;
+  background-color: #efefef;
+  color: #444;
+`;
+
+/* component */
 const Layout = ({ children }) => (
-  <div className={styles.layout}>
-    <nav>
+  <Body>
+    <Nav>
       <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
+        <li><Nav.Link to="/">Home</Nav.Link></li>
+        <li><Nav.Link to="/about">About</Nav.Link></li>
       </ul>
-    </nav>
-    <div className={styles.app}>
-      { children }
-    </div>
-  </div>
+    </Nav>
+    <Content>
+      {children}
+    </Content>
+  </Body>
 );
 
+/* propTypes */
 Layout.propTypes = {
   children: PropTypes.any,
 };

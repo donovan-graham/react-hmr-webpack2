@@ -1,11 +1,10 @@
 import React, { PropTypes } from 'react';
-
-// components
 import Button from 'components/button';
+import Heading from 'components/heading';
 
 const Home = ({ counter, onUp, onDown }) => (
   <div>
-    <h2>Home</h2>
+    <Heading>Home</Heading>
     <div>Counter: {counter}</div>
     <Button onClick={onUp}>Up</Button>
     <Button onClick={onDown}>Down</Button>

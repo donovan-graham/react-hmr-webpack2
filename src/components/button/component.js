@@ -1,16 +1,28 @@
 import React, { PropTypes } from 'react';
+import styled from 'styled-components';
 
-// styles
-import styles from './style.css';
+const Button = styled.button`
+	background-color:#44c767;
+	border-radius:4px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+  margin: 5px 10px 5px 0;
 
-const Button = ({ onClick, children }) => (
-  <button className={styles.btn} onClick={onClick}>{children}</button>
-);
+  &:hover {
+	   background-color: red;
+  }
 
-Button.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  children: PropTypes.any,
-};
-
+  &:active {
+  	position:relative;
+  	top:1px;
+  }
+`;
 
 export default Button;

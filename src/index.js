@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { createStore, applyMiddleware, compose } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
 import { browserHistory } from 'react-router';
@@ -9,21 +9,20 @@ import { routerMiddleware, syncHistoryWithStore } from 'react-router-redux';
 
 import { AppContainer } from 'react-hot-loader';
 
-
 import App from './components/App';
 import rootReducer from './root';
 
-
 const sagaMiddleware = createSagaMiddleware();
 const rootMiddleware = [routerMiddleware(browserHistory), sagaMiddleware];
-
 
 const store = {
   ...createStore(
     rootReducer,
     // initialState,
-    compose(applyMiddleware(...rootMiddleware),
-    window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f)
+    compose(
+      applyMiddleware(...rootMiddleware),
+      window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f
+    )
   ),
   runSaga: sagaMiddleware.run,
 };
@@ -33,8 +32,7 @@ rootSagas.map(store.runSaga);
 
 const history = syncHistoryWithStore(browserHistory, store);
 
-
-const render = (App) => {
+const render = App => {
   ReactDOM.render(
     <AppContainer>
       <App store={store} history={history} />
@@ -42,7 +40,6 @@ const render = (App) => {
     document.getElementById('root')
   );
 };
-
 
 render(App);
 

@@ -1,7 +1,6 @@
 import React from 'react';
+import Heading from 'components/heading';
 
-const About = () => (
-  <h2>About</h2>
-);
+const About = () => <Heading>About</Heading>;
 
 export default About;
