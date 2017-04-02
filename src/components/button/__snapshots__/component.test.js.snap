@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component default 1`] = `
+<button
+  className="exZpUW"
+>
+  default
+</button>
+`;
+
+exports[`Button component default large 1`] = `
+<button
+  className="hOoguq"
+>
+  default large
+</button>
+`;
+
+exports[`Button component primary 1`] = `
+<button
+  className="exZpUW"
+>
+  primary
+</button>
+`;
+
+exports[`Button component primary large 1`] = `
+<button
+  className="cGYEQn"
+>
+  primary large
+</button>
+`;

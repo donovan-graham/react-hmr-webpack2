@@ -6,7 +6,7 @@ const Home = ({ counter, onUp, onDown }) => (
   <div>
     <Heading>Home</Heading>
     <div>Counter: {counter}</div>
-    <Button onClick={onUp}>Up</Button>
+    <Button primary onClick={onUp}>Up</Button>
     <Button onClick={onDown}>Down</Button>
   </div>
 );

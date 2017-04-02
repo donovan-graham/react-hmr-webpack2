@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading component renders "Snapper" 1`] = `
+<h1
+  className="fJDhHD"
+>
+  Snapper
+</h1>
+`;
+
+exports[`Heading component renders "Snappy" 1`] = `
+<h1
+  className="fJDhHD"
+>
+  Snappy
+</h1>
+`;

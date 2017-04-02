@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation component main naviation 1`] = `
+<nav
+  className="fuzYCF"
+/>
+`;
+
+exports[`Navigation component navigation link 1`] = `
+<a
+  className="cbSlSU"
+  href="/"
+  onClick={[Function]}
+  style={Object {}}
+>
+  Home
+</a>
+`;

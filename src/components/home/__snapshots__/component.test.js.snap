@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component couner at 1 1`] = `
+<div>
+  <h1
+    className="fJDhHD"
+  >
+    Home
+  </h1>
+  <div>
+    Counter: 
+    1
+  </div>
+  <button
+    className="eIazjU"
+    onClick={[Function]}
+  >
+    Up
+  </button>
+  <button
+    className="exZpUW"
+    onClick={[Function]}
+  >
+    Down
+  </button>
+</div>
+`;
+
+exports[`Home component couner at 5 1`] = `
+<div>
+  <h1
+    className="fJDhHD"
+  >
+    Home
+  </h1>
+  <div>
+    Counter: 
+    5
+  </div>
+  <button
+    className="eIazjU"
+    onClick={[Function]}
+  >
+    Up
+  </button>
+  <button
+    className="exZpUW"
+    onClick={[Function]}
+  >
+    Down
+  </button>
+</div>
+`;
