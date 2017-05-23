@@ -5,8 +5,14 @@
   "main": "index.js",
   "jest": {
     "testRegex": "\\.test\\.js$",
-    "moduleFileExtensions": ["js", "jsx"],
-    "moduleDirectories": [ "src", "node_modules"]
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "src",
+      "node_modules"
+    ]
   },
   "scripts": {
     "start": "node app.js",
@@ -41,7 +47,8 @@
     "webpack": "^2.2.1",
     "webpack-dev-middleware": "^1.10.1",
     "webpack-dev-server": "^2.4.1",
-    "webpack-hot-middleware": "^2.17.1"
+    "webpack-hot-middleware": "^2.17.1",
+    "whatwg-fetch": "^2.0.3"
   },
   "dependencies": {
     "cookie-parser": "^1.4.3",

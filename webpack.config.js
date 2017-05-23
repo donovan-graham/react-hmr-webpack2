@@ -9,6 +9,8 @@ module.exports = {
     'babel-polyfill',
     // Set up an ES6-ish environment
 
+    'whatwg-fetch',
+
     'react-hot-loader/patch',
     // activate HMR for React
 
@@ -59,7 +61,7 @@ module.exports = {
   },
 
   resolve: {
-    modules: [resolve(__dirname, 'src'), 'node_modules'],
+    modules: [resolve(__dirname, 'src'), resolve(__dirname, 'shared'), 'node_modules'],
   },
 
   module: {

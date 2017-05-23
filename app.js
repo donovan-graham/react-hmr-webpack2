@@ -37,6 +37,8 @@ if (process.env.NODE_ENV !== 'production') {
   fs = wpDevMiddleware.fileSystem;
 }
 
+app.use('/api', [require('./shared/components/news-item/router')]);
+
 app.get('*', (req, res) => {
   const html = fs.readFileSync(`${distPath}/index.html`, 'utf8');
   const timestamp = new Date().toUTCString();
